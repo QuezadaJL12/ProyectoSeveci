@@ -1,6 +1,7 @@
 package gui;
 
 import java.util.Date;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class Ticket extends javax.swing.JFrame {
@@ -19,29 +20,29 @@ public class Ticket extends javax.swing.JFrame {
         this.costoTotal = costoTotal;
 
         // Actualizar los campos de texto con los datos de la cita
-        textFieldNombreEmpresaT1.setText(nombreEmpresa);
-        textFieldCantidadExtT1.setText(cantidadExtintores);
+        textFieldNombreEmpresaT.setText(nombreEmpresa);
+        textFieldCantidadExtT.setText(cantidadExtintores);
         textFieldFechaCitaT.setText(fecha);
         textFieldHoraT.setText(horario);
         textFieldCostoTotalT.setText(costoTotal);
 
         // Deshabilitar la edición de los campos de texto
-        textFieldNombreEmpresaT1.setEditable(false);
-        textFieldCantidadExtT1.setEditable(false);
+        textFieldNombreEmpresaT.setEditable(false);
+        textFieldCantidadExtT.setEditable(false);
         textFieldFechaCitaT.setEditable(false);
         textFieldHoraT.setEditable(false);
         textFieldCostoTotalT.setEditable(false);
 
         // Centrar el texto en los campos de texto
-        textFieldNombreEmpresaT1.setHorizontalAlignment(JTextField.CENTER);
-        textFieldCantidadExtT1.setHorizontalAlignment(JTextField.CENTER);
+        textFieldNombreEmpresaT.setHorizontalAlignment(JTextField.CENTER);
+        textFieldCantidadExtT.setHorizontalAlignment(JTextField.CENTER);
         textFieldFechaCitaT.setHorizontalAlignment(JTextField.CENTER);
         textFieldHoraT.setHorizontalAlignment(JTextField.CENTER);
         textFieldCostoTotalT.setHorizontalAlignment(JTextField.CENTER);
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -56,11 +57,11 @@ public class Ticket extends javax.swing.JFrame {
         textFieldCostoTotalT = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        textFieldCantidadExtT1 = new javax.swing.JTextField();
+        textFieldCantidadExtT = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         textFieldFechaCitaT = new javax.swing.JTextField();
         textFieldHoraT = new javax.swing.JTextField();
-        textFieldNombreEmpresaT1 = new javax.swing.JTextField();
+        textFieldNombreEmpresaT = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
@@ -88,11 +89,21 @@ public class Ticket extends javax.swing.JFrame {
         btnModificar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnModificar.setForeground(new java.awt.Color(255, 255, 255));
         btnModificar.setText("Modificar");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setBackground(new java.awt.Color(255, 51, 51));
         btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
         btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("Nombre de la Empresa:");
@@ -109,9 +120,9 @@ public class Ticket extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setText("Horario:");
 
-        textFieldCantidadExtT1.addActionListener(new java.awt.event.ActionListener() {
+        textFieldCantidadExtT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldCantidadExtT1ActionPerformed(evt);
+                textFieldCantidadExtTActionPerformed(evt);
             }
         });
 
@@ -130,9 +141,9 @@ public class Ticket extends javax.swing.JFrame {
             }
         });
 
-        textFieldNombreEmpresaT1.addActionListener(new java.awt.event.ActionListener() {
+        textFieldNombreEmpresaT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldNombreEmpresaT1ActionPerformed(evt);
+                textFieldNombreEmpresaTActionPerformed(evt);
             }
         });
 
@@ -156,8 +167,8 @@ public class Ticket extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel4))
-                            .addComponent(textFieldCantidadExtT1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFieldNombreEmpresaT1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(textFieldCantidadExtT, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textFieldNombreEmpresaT, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(74, 74, 74)
                         .addComponent(jLabel7))
@@ -213,13 +224,13 @@ public class Ticket extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(textFieldNombreEmpresaT1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textFieldNombreEmpresaT, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel5)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textFieldCantidadExtT1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(textFieldCantidadExtT, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(12, 12, 12)
                                         .addComponent(jLabel7)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -257,33 +268,86 @@ public class Ticket extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void textFieldCostoTotalTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCostoTotalTActionPerformed
+    private void textFieldCostoTotalTActionPerformed(java.awt.event.ActionEvent evt) {                                                     
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldCostoTotalTActionPerformed
+    }                                                    
 
-    private void textFieldCantidadExtT1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldCantidadExtT1ActionPerformed
+    private void textFieldCantidadExtTActionPerformed(java.awt.event.ActionEvent evt) {                                                      
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldCantidadExtT1ActionPerformed
+    }                                                     
 
-    private void textFieldFechaCitaTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldFechaCitaTActionPerformed
+    private void textFieldFechaCitaTActionPerformed(java.awt.event.ActionEvent evt) {                                                    
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldFechaCitaTActionPerformed
+    }                                                   
 
-    private void textFieldHoraTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldHoraTActionPerformed
+    private void textFieldHoraTActionPerformed(java.awt.event.ActionEvent evt) {                                               
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldHoraTActionPerformed
+    }                                              
 
-    private void textFieldNombreEmpresaT1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNombreEmpresaT1ActionPerformed
+    private void textFieldNombreEmpresaTActionPerformed(java.awt.event.ActionEvent evt) {                                                        
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldNombreEmpresaT1ActionPerformed
+    }                                                       
 
-    private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfirmarActionPerformed
-        Menu menu = new Menu(); // Crear una instancia de la clase Menu
-        menu.setVisible(true); // Hacer visible el menú principal
-        dispose(); // Cerrar la ventana actual (Agendar)
-    }//GEN-LAST:event_btnConfirmarActionPerformed
+    private void btnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {                                             
+// Obtener los datos de la cita desde la ventana Ticket
+        String nombreEmpresa = textFieldNombreEmpresaT.getText();
+        String cantidadExtintores = textFieldCantidadExtT.getText();
+        String fecha = textFieldFechaCitaT.getText(); // Suponiendo que obtienes la fecha como texto
+        String horario = textFieldHoraT.getText();
+        String costoTotal = textFieldCostoTotalT.getText();
+
+        // Crear una nueva instancia de Cita con los datos obtenidos
+        Cita cita = new Cita(nombreEmpresa, cantidadExtintores, fecha, horario, costoTotal);
+
+        // Agregar la cita a la lista en la ventana Consultar
+        Consultar.obtenerInstancia().agregarCita(cita);
+        
+        // Actualizar la tabla en Consultar
+        Consultar.obtenerInstancia().actualizarTabla();
+
+        // Mostrar un mensaje de éxito
+        JOptionPane.showMessageDialog(this, "¡Su cita ha sido agendada con éxito!", "Cita Agendada", JOptionPane.INFORMATION_MESSAGE);
+
+        // Cerrar la ventana actual (Ticket)
+        dispose();
+
+        // Mostrar el menú principal
+        Menu menu = new Menu();
+        menu.setVisible(true);
+    
+    }                                            
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // Mostrar un cuadro de diálogo de confirmación
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Está seguro de cancelar la cita?", "Confirmar cancelación", JOptionPane.YES_NO_OPTION);
+
+        // Verificar la opción seleccionada por el usuario
+        if (opcion == JOptionPane.YES_OPTION) {
+            // Si el usuario confirma la cancelación, cerrar la ventana actual (Ticket)
+            dispose();
+
+            // Aquí puedes agregar el código para mostrar el menú principal, si es necesario
+            Menu menu = new Menu();
+            menu.setVisible(true);
+        }
+    }                                           
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        // Mostrar un cuadro de diálogo de confirmación
+        int opcion = JOptionPane.showConfirmDialog(this, "¿Está seguro de modificar su agenda?", "Confirmar modificación", JOptionPane.YES_NO_OPTION);
+
+        // Verificar la opción seleccionada por el usuario
+        if (opcion == JOptionPane.YES_OPTION) {
+            // Si el usuario confirma la modificación, abrir la ventana de Agendar
+            Agendar agendar = new Agendar();
+            agendar.setVisible(true);
+
+            // Cerrar la ventana actual (Ticket)
+            dispose();
+        }
+    }                                            
 
     /**
      * @param args the command line arguments
@@ -300,23 +364,27 @@ public class Ticket extends javax.swing.JFrame {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
 
-                }
+}
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Ticket.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ticket.class  
 
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Ticket.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Ticket.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+} catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Ticket.class  
 
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Ticket.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Ticket.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
+} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Ticket.class  
+
+.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -329,7 +397,7 @@ public class Ticket extends javax.swing.JFrame {
     }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnConfirmar;
     private javax.swing.JButton btnModificar;
@@ -343,12 +411,12 @@ public class Ticket extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField textFieldCantidadExtT1;
+    private javax.swing.JTextField textFieldCantidadExtT;
     private javax.swing.JTextField textFieldCostoTotalT;
     private javax.swing.JTextField textFieldFechaCitaT;
     private javax.swing.JTextField textFieldHoraT;
-    private javax.swing.JTextField textFieldNombreEmpresaT1;
+    private javax.swing.JTextField textFieldNombreEmpresaT;
     private javax.swing.JLabel txtEmpresaB;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 
 }
