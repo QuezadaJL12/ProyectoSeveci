@@ -2,8 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package entidades;
-
+package Dominio;
 
 /**
  *
@@ -16,7 +15,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Repartidor implements Serializable {
+public class Cliente implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -24,20 +23,20 @@ public class Repartidor implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String nombreRepartidor;
+    private String nombreCliente;
     private String informacionContacto; // Puede ser teléfono, correo electrónico, etc.
+// contructor vacio
 
-    public Repartidor() {
+    public Cliente() {
     }
 
-    
-    // Getters y setters para los atributos
-    public String getNombreRepartidor() {
-        return nombreRepartidor;
+// Getters y setters para los atributos
+    public String getNombreCliente() {
+        return nombreCliente;
     }
 
-    public void setNombreRepartidor(String nombreRepartidor) {
-        this.nombreRepartidor = nombreRepartidor;
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
     }
 
     public String getInformacionContacto() {
@@ -47,27 +46,12 @@ public class Repartidor implements Serializable {
     public void setInformacionContacto(String informacionContacto) {
         this.informacionContacto = informacionContacto;
     }
-    
-    //cSID
 
-    public Repartidor(String nombreRepartidor, String informacionContacto) {
-        this.nombreRepartidor = nombreRepartidor;
+    // contructor sin ID
+    public Cliente(String nombreCliente, String informacionContacto) {
+        this.nombreCliente = nombreCliente;
         this.informacionContacto = informacionContacto;
     }
-    
-    //ccid
-
-    public Repartidor(Long id, String nombreRepartidor, String informacionContacto) {
-        this.id = id;
-        this.nombreRepartidor = nombreRepartidor;
-        this.informacionContacto = informacionContacto;
-    }
-    
-    
-    
-    
-    
-    
 
     @Override
     public int hashCode() {
@@ -78,15 +62,15 @@ public class Repartidor implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        if (!(object instanceof Repartidor)) {
+        if (!(object instanceof Cliente)) {
             return false;
         }
-        Repartidor other = (Repartidor) object;
+        Cliente other = (Cliente) object;
         return (this.id != null || other.id == null) && (this.id == null || this.id.equals(other.id));
     }
 
     @Override
     public String toString() {
-        return "entidades.Repartidor[ id=" + id + " ]";
+        return "entidades.Cliente[ id=" + id + " ]";
     }
 }

@@ -4,7 +4,7 @@
  */
 package daos;
 
-import entidades.Registro_de_Entrega;
+import Dominio.Registro_de_Entrega;
 
 public interface RegistroDeEntregaDAO {
     Registro_de_Entrega crear(Registro_de_Entrega registro);

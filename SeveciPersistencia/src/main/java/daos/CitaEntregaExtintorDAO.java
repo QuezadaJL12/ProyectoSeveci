@@ -4,7 +4,7 @@
  */
 package daos;
 
-import entidades.CitaEntregaExtintor;
+import Dominio.CitaEntregaExtintor;
 
 public interface CitaEntregaExtintorDAO {
     CitaEntregaExtintor crear(CitaEntregaExtintor cita);

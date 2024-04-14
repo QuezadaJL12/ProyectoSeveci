@@ -4,7 +4,7 @@
  */
 package daos;
 
-import entidades.Cliente;
+import Dominio.Cliente;
 
 public interface ClienteDAO {
     Cliente crear(Cliente cliente);

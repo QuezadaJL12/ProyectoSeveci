@@ -4,7 +4,7 @@
  */
 package daos;
 
-import entidades.Repartidor;
+import Dominio.Repartidor;
 
 public interface RepartidorDAO {
     Repartidor crear(Repartidor repartidor);

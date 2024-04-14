@@ -4,7 +4,7 @@
  */
 package daos;
 
-import entidades.Extintor;
+import Dominio.Extintor;
 
 public interface ExtintorDAO {
     Extintor crear(Extintor extintor);
